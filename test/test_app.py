@@ -1,7 +1,3 @@
-import json
-from flaskr import random_name
-
-
 def test_index_route(app, client):
     res = client.get('/')
     assert res.status_code == 200
@@ -38,4 +34,3 @@ def test_get_primes_route(app, client):
     assert res.status_code == 200
     expected = "Please select a natural number lower or equal to 1000."
     assert expected == res.get_data(as_text=True)
-    
